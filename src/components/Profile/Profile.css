@@ -1,0 +1,13 @@
+.myCoffees {
+    border: 1px black solid;
+    margin: 20px 10px;
+}
+
+.singleMyCoffee {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.body {
+    padding-top: 50px;
+}

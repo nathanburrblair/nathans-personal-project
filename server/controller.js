@@ -50,5 +50,29 @@ module.exports = {
             console.log(err);
             res.status(500).send(err)
         })
+    }, 
+
+    showMyCoffees: (req, res) => {
+        const db = req.app.get('db');
+        db.my_coffees()
+        .then( coffees => {
+            res.status(200).send(coffees);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send(err)
+        })
+    }, 
+
+    allCoffees: (req, res) => {
+        const db = req.app.get('db');
+        db.all_coffees()
+        .then( coffees => {
+            res.status(200).send(coffees);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).send(err)
+        })
     }
 }

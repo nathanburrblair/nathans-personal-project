@@ -10,7 +10,7 @@ class Nav extends Component {
                     Roasted
                 </div>
                 <ul className="navlinks">
-                    <Link to="/"><li>Home</li></Link>
+                    <Link to="/get-started"><li>Get Started</li></Link>
                     <Link to="/profile"><li>Profile</li></Link>
                     <Link to="/coffee-store"><li>Store</li></Link>
                     <li>Logout</li>

@@ -89,43 +89,47 @@ class AddCoffee extends Component {
         console.log(this.state)
         return(
             <div>
-                <Nav />
-                <h1>
-                    Add Your Coffee
-                </h1>
                 <div>
-                    <h2>Coffee Name</h2>
-                    <input onChange={(e) => this.handleCoffeeName(e.target.value)} type="text"/>
+                    <Nav />
                 </div>
-                <div>
-                    <h2>Coffee Roaster</h2>
-                    <input onChange={(e) => this.handleCoffeeRoaster(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <h2>Coffee Origin</h2>
-                    <input onChange={(e) => this.handleCoffeeOrigin(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <h2>Brew Method</h2>
-                    <input onChange={(e) => this.handleCoffeeBrewMethod(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <h2>Coffee Weight</h2>
-                    <input onChange={(e) => this.handleCoffeeWeight(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <h2>Water Weight</h2>
-                    <input onChange={(e) => this.handleWaterWeight(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <h2>Rating:</h2>
-                </div>
-                <div>
-                    <h2>Additional Thoughts</h2>
-                    <input onChange={(e) => this.handleAdditionalThoughts(e.target.value)} type="text"/>
-                </div>
-                <div>
-                    <button onClick={this.handleAddCoffee}>Add</button>
+                <div className="body">
+                    <h1>
+                        Add Your Coffee
+                    </h1>
+                    <div>
+                        <h2>Coffee Name</h2>
+                        <input onChange={(e) => this.handleCoffeeName(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Coffee Roaster</h2>
+                        <input onChange={(e) => this.handleCoffeeRoaster(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Coffee Origin</h2>
+                        <input onChange={(e) => this.handleCoffeeOrigin(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Brew Method</h2>
+                        <input onChange={(e) => this.handleCoffeeBrewMethod(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Coffee Weight</h2>
+                        <input onChange={(e) => this.handleCoffeeWeight(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Water Weight</h2>
+                        <input onChange={(e) => this.handleWaterWeight(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <h2>Rating:</h2>
+                    </div>
+                    <div>
+                        <h2>Additional Thoughts</h2>
+                        <input onChange={(e) => this.handleAdditionalThoughts(e.target.value)} type="text"/>
+                    </div>
+                    <div>
+                        <button onClick={this.handleAddCoffee}>Add</button>
+                    </div>
                 </div>
             </div>
         )

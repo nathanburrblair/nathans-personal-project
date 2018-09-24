@@ -32,7 +32,9 @@ app.use(session({
 app.get('/api/coffees', controller.getCoffees)
 app.post('/api/coffees', controller.addCoffee)
 app.get('/api/coffees/get-latest', controller.showLastCoffee)
-app.put('/api/coffees/:id', controller.updateCoffee)
+app.put('/api/coffees/:coffee_id', controller.updateCoffee)
+app.get('/api/coffees/my-coffees', controller.showMyCoffees)
+app.get('/api/coffees/all-coffees', controller.allCoffees)
 
 
 app.use((req, res, next) => {

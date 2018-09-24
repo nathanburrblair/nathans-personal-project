@@ -3,7 +3,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(127, 116, 103, 0.32);
+    background-color: rgba(127, 116, 103);
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
