@@ -29,14 +29,6 @@ app.use(session({
 }))
 
 
-app.get('/api/coffees', controller.getCoffees)
-app.post('/api/coffees', controller.addCoffee)
-app.get('/api/coffees/get-latest', controller.showLastCoffee)
-app.put('/api/coffees/:coffee_id', controller.updateCoffee)
-app.get('/api/coffees/my-coffees', controller.showMyCoffees)
-app.get('/api/coffees/all-coffees', controller.allCoffees)
-
-
 app.use((req, res, next) => {
     if (ENVIRONMENT === 'dev') {
         req.app.get('db').set_data().then(userData => {
@@ -58,20 +50,21 @@ app.get('/auth/callback', async (req, res) => {
     }
 
     //post request with code for token
-
+    
     let tokenRes = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
-
+    
     //use token to get user data
-
+    
     let userRes = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${tokenRes.data.access_token}`)
-
+    
     //see if we have a user in the database with that auth id already
-
+    
     const db = req.app.get('db');
     const {email, name, picture, sub} = userRes.data; //destructuring
     let foundUser = await db.find_user([sub])
     if (foundUser[0]) {
         req.session.user = foundUser[0];
+        console.log(req.session.user)
     } else {
         let createdUser = await db.create_user(
             [name, email, picture, sub])
@@ -90,9 +83,20 @@ app.get('/api/user-data', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.session.destroy();
-    res.redirect('http://localhost:3000/')
+        res.redirect(`https://nathanblair.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000&client_id=${REACT_APP_CLIENT_ID}`)
 })
 
+app.get('/api/coffees', controller.getCoffees)
+app.post('/api/coffees', controller.addCoffee)
+app.get('/api/coffees/get-latest', controller.showLastCoffee)
+app.put('/api/coffees/:coffee_id', controller.updateCoffee)
+app.get('/api/coffees/my-coffees', controller.showMyCoffees)
+app.get('/api/coffees/all-coffees', controller.allCoffees)
+app.get('/api/products', controller.allProducts)
+app.delete('/api/coffees/my-coffees/:coffee_id', controller.deleteCoffee)
+app.post('/api/cart', controller.addToCart)
+app.get('/api/cart', controller.displayMyCart)
+app.delete('/api/cart/:cart_id', controller.deleteFromCart)
 
 app.listen(SERVER_PORT, () => {
     console.log(`Listening on port ${SERVER_PORT}`)

@@ -1,5 +1,5 @@
 update coffees
-set additionalthoughts = ${additionalthoughts}
+set additionalthoughts = ${additionalthoughts}, coffeename = ${coffeename}
 where coffee_id = ${coffee_id};
 
 select * from coffees

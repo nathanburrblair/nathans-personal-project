@@ -3,6 +3,8 @@ import Nav from '../Nav/Nav';
 import {connect} from 'react-redux';
 import {addCoffee} from '../../ducks/reducer';
 import axios from 'axios';
+import './AddCoffee.css';
+import Sidebar from '../Sidebar/Sidebar';
 
 class AddCoffee extends Component {
 
@@ -88,47 +90,45 @@ class AddCoffee extends Component {
     render () {
         console.log(this.state)
         return(
-            <div>
-                <div>
-                    <Nav />
-                </div>
-                <div className="body">
-                    <h1>
-                        Add Your Coffee
-                    </h1>
+            <div className="wholeAddBody">
+            <Sidebar />
+                <Nav />
+                <div className="addBody"></div>
                     <div>
-                        <h2>Coffee Name</h2>
+                    <h1 className="add">Add Your Coffee</h1>
+                    <div>
+                        <h3 className="subtitle">Coffee Name</h3>
                         <input onChange={(e) => this.handleCoffeeName(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Coffee Roaster</h2>
+                        <h3 className="subtitle">Coffee Roaster</h3>
                         <input onChange={(e) => this.handleCoffeeRoaster(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Coffee Origin</h2>
+                        <h3 className="subtitle">Coffee Origin</h3>
                         <input onChange={(e) => this.handleCoffeeOrigin(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Brew Method</h2>
+                        <h3 className="subtitle">Brew Method</h3>
                         <input onChange={(e) => this.handleCoffeeBrewMethod(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Coffee Weight</h2>
+                        <h3 className="subtitle">Coffee Weight</h3>
                         <input onChange={(e) => this.handleCoffeeWeight(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Water Weight</h2>
+                        <h3 className="subtitle">Water Weight</h3>
                         <input onChange={(e) => this.handleWaterWeight(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <h2>Rating:</h2>
+                        <h3 className="subtitle">Rating:</h3>
                     </div>
                     <div>
-                        <h2>Additional Thoughts</h2>
-                        <input onChange={(e) => this.handleAdditionalThoughts(e.target.value)} type="text"/>
+                        <h3 className="subtitle">Additional Thoughts</h3>
+                        <input className="thoughtsInput" onChange={(e) => this.handleAdditionalThoughts(e.target.value)} type="text"/>
                     </div>
                     <div>
-                        <button onClick={this.handleAddCoffee}>Add</button>
+                        <button className="addSingleCoffee" onClick={this.handleAddCoffee}>Add</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,58 @@
+#App {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+#page-wrap {
+    text-align: center;
+    overflow: auto;
+}
+
+.bm-item {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #F1EEEA;
+    transition: color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.bm-item:hover {
+    color: white;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 28px;
+    height: 20px;
+    left: 20px;
+    top: 20px;
+}
+
+.bm-burger-bars {
+    background: #3D3B37;
+}
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+.bm-cross {
+    background: #F1EEEA;
+}
+
+.bm-menu {
+    background: #514A41;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.55em;
+}
+
+.bm-item-list {
+    color: #F1EEEA;
+}
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3)
+}
