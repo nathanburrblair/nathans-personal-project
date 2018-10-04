@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
@@ -6,7 +7,9 @@ const massive = require('massive');
 const controller = require('./controller.js');
 const bodyParser = require('body-parser');
 
+
 const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
 
 app.use(bodyParser.json());
 
@@ -17,7 +20,8 @@ const {
     REACT_APP_DOMAIN,
     REACT_APP_CLIENT_ID,
     CLIENT_SECRET,
-    ENVIRONMENT
+    ENVIRONMENT,
+    STRIPE_SECRET,
 } = process.env;
 
 massive(CONNECTION_STRING).then(db => app.set('db', db));
@@ -83,7 +87,7 @@ app.get('/api/user-data', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.session.destroy();
-        res.redirect(`https://nathanblair.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:3000&client_id=${REACT_APP_CLIENT_ID}`)
+        res.redirect(`https://nathanblair.auth0.com/v2/logout?returnTo=${process.env.REACT_APP_CLIENT_URL}&client_id=${REACT_APP_CLIENT_ID}`)
 })
 
 app.get('/api/coffees', controller.getCoffees)
@@ -97,6 +101,8 @@ app.delete('/api/coffees/my-coffees/:coffee_id', controller.deleteCoffee)
 app.post('/api/cart', controller.addToCart)
 app.get('/api/cart', controller.displayMyCart)
 app.delete('/api/cart/:cart_id', controller.deleteFromCart)
+app.post('/api/payment', controller.handlePayment)
+app.delete('/api/cart', controller.clearCart)
 
 app.listen(SERVER_PORT, () => {
     console.log(`Listening on port ${SERVER_PORT}`)

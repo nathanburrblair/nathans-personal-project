@@ -12,24 +12,24 @@ class Profile extends Component {
       myCoffees: []
     };
 
-this.handleDelete = this.handleDelete.bind(this);
+this.handleDeleteCoffee = this.handleDeleteCoffee.bind(this);
 
   }
 
   componentDidMount() {
-    axios
-      .get("/api/coffees/my-coffees")
+    axios.get("/api/coffees/my-coffees")
       .then(res => this.setState({ myCoffees: res.data }));
   }
 
-  handleDelete (coffee_id) {
+  handleDeleteCoffee (coffee_id) {
     axios.delete(`/api/coffees/my-coffees/${coffee_id}`)
-    .then( res => this.setState({myCoffees: res.data}))
+    .then( res => 
+      this.setState({myCoffees: res.data}))
   }
 
   render() {
     console.log(this.state);
-    console.log(this.state.myCoffees)
+    console.log('just my coffees', this.state.myCoffees)
     let coffeesToDisplay = this.state.myCoffees.map((element, i) => {
       return (
         <div className="myCoffees">
@@ -44,7 +44,9 @@ this.handleDelete = this.handleDelete.bind(this);
             <li waterweight={i}>Water Weight (grams): {element.waterweight}</li>
             <li rating={i}>Rating: {element.rating}</li>
             <li additionalthoughts={i}>Additional Thoughts: {element.additionalthoughts}</li>
-            <button onClick={this.handleDelete}>Delete</button>
+            <div>
+              <button className="deleteACoffee" onClick={() => this.handleDeleteCoffee(element.coffee_id)}>Delete</button>
+            </div>
           </ul>
         </div>
       );

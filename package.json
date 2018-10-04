@@ -20,7 +20,10 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
-    "redux": "^4.0.0"
+    "react-stripe-checkout": "^2.6.3",
+    "react-stripe-elements": "^2.0.1",
+    "redux": "^4.0.0",
+    "stripe": "^6.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,10 +34,10 @@
   "main": "server/server.js",
   "proxy": {
     "/api": {
-      "target": "http://localhost:4400"
+      "target": "process.env.REACT_APP_LOGIN"
     },
     "/auth": {
-      "target": "http://localhost:4400"
+      "target": "process.env.REACT_APP_LOGIN"
     }
   }
 }

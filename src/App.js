@@ -7,10 +7,10 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <div className="App">
-       
-        {Routes}
-        </div>
+          <div className="App">
+            
+          {Routes}
+          </div>
       </HashRouter>
     );
   }

@@ -32,7 +32,7 @@ class GetStarted extends Component {
             <div className="allUserInfo">
               <div className="parentUser">
                 {/* <li className="userInfo" username={i}>User: {element.user_name}</li> */}
-                <p>User image</p>
+                <img className="userPicture" src={element.picture} alt=""/>
               </div>
               <div className="otherUserInfo">
                 <li className="coffeeRoaster" coffeeroaster={i}>Roaster: {element.coffeeroaster}</li>

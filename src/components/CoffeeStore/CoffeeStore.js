@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import Sidebar from "../Sidebar/Sidebar";
 import {getAllProducts, addToCart} from '../../ducks/reducer';
 import store from '../../store';
+import {Link} from 'react-router-dom';
 
 class CoffeeStore extends Component {
 
@@ -64,6 +65,9 @@ class CoffeeStore extends Component {
           </div>
         <div className="subImage">
         {displayProducts}
+        </div>
+        <div className="checkoutButtonDiv">
+          <Link to="/cart"><button className="checkoutButton">Continue to Cart</button></Link>
         </div>
         <footer className="footer">
           <p>Roasted 2018</p>

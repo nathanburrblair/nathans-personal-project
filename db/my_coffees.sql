@@ -1,4 +1,5 @@
 select 
+coffee_id,
 coffeename, 
 coffeeroaster, 
 coffeeorigin, 

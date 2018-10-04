@@ -11,6 +11,7 @@ import CoffeeStore from './components/CoffeeStore/CoffeeStore';
 import Cart from './components/Cart/Cart';
 import ThankYou from './components/ThankYou/ThankYou';
 import Private from './components/Private/Private';
+import Checkout from './components/Checkout/Checkout';
 
 export default <Switch>
     <Route exact path="/" component={Login} />
@@ -23,4 +24,5 @@ export default <Switch>
     <Route path="/coffee-store" component={CoffeeStore} />
     <Route path="/cart" component={Cart} />
     <Route path="/thank-you" component={ThankYou} />
+    <Route path="/checkout" component={Checkout} />
 </Switch>

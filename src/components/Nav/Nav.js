@@ -5,15 +5,16 @@ import { connect } from "react-redux";
 
 class Nav extends Component {
   render() {
+    console.log('items in cart', this.props.cart.length)
     return (
       <div className="headernav">
         <div className="logo">
           Roasted
-          <div className="cartIcon">
+          <Link to="/cart"><div className="cartIcon">
             <div className="cartCounter">{this.props.cart.length}</div>
-            <i class="material-icons">shopping_cart</i>
-          </div>
-          <ul className="navlinks">
+            <i className="material-icons">shopping_cart</i>
+          </div></Link>
+          {/* <ul className="navlinks">
             <Link to="/get-started">
               <li>Get Started</li>
             </Link>
@@ -24,7 +25,7 @@ class Nav extends Component {
               <li>Store</li>
             </Link>
             <li>Logout</li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     );
