@@ -29,6 +29,7 @@ class Checkout extends Component {
       this.props.displayCart(res.data);
       this.setState({totalPrice: total})
     });
+    window.scrollTo(0, 0)
   }
 
   onToken = token => {

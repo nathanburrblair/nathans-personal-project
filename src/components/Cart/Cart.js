@@ -13,6 +13,7 @@ class Cart extends Component {
     axios.get("/api/cart").then(res => {
       this.props.displayCart(res.data);
     });
+    window.scrollTo(0, 0)
   }
 
   handleDeleteFromCart (cart_id) {
@@ -23,9 +24,6 @@ class Cart extends Component {
   }
 
   render() {
-    console.log("This is cart", this.props.cart);
-    console.log("how many items in cart right now", this.props.cart.length)
-
 
     let displayCartItems = this.props.cart.map((element, i) => {
       return (
@@ -59,7 +57,6 @@ class Cart extends Component {
         <div className="checkoutButtonDiv">
           <Link to="/checkout"><button className="checkoutButton">Continue to Checkout</button></Link>
         </div>
-        
         <footer className="footer">
           <p>Roasted 2018</p>
         </footer>

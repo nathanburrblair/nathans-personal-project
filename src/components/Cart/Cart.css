@@ -45,6 +45,10 @@
     background-color: #FCFAF8;
 }
 
+.cartImageContainer {
+    width: 300px;
+}
+
 .cartProductName {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -83,9 +87,6 @@
     padding: 0 10px 0 10px;
 }
 
-.cartImageContainer {
-    width: 300px;
-}
 
 .deleteFromCart {
     width: 120px;

@@ -26,6 +26,10 @@ class AddCoffee extends Component {
 
     }
 
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
+
     handleCoffeeName (name) {
         this.setState({
             coffeeName: name

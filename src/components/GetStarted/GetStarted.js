@@ -20,6 +20,7 @@ class GetStarted extends Component {
         allCoffees: res.data
       })
     );
+    window.scrollTo(0, 0)
   }
 
   render() {

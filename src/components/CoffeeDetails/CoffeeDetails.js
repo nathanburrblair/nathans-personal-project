@@ -55,6 +55,7 @@ class CoffeeDetails extends Component {
         // editNameInput: res.data[0].coffeename
       });
     });
+    window.scrollTo(0, 0)
   }
 
   handleEditClick() {

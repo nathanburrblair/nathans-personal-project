@@ -18,7 +18,9 @@ this.handleDeleteCoffee = this.handleDeleteCoffee.bind(this);
 
   componentDidMount() {
     axios.get("/api/coffees/my-coffees")
-      .then(res => this.setState({ myCoffees: res.data }));
+      .then(res => this.setState({ myCoffees: res.data }
+    ));
+    window.scrollTo(0, 0)
   }
 
   handleDeleteCoffee (coffee_id) {

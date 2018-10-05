@@ -21,7 +21,8 @@ class CoffeeStore extends Component {
     axios.get('/api/products')
     .then(res => {
       store.dispatch(getAllProducts(res.data));
-    })
+    });
+    window.scrollTo(0, 0)
   }
 
   handleAddToCart (product_id) {
@@ -38,7 +39,7 @@ class CoffeeStore extends Component {
     let displayProducts = this.props.products.map((element, i) => {
       return (
         <div className="coffeeProducts">
-          <div>
+          <div className="coffeeImageContainer">
             <img className="imageOne" src={element.product_image} alt=""/>
           </div>
           <div className="pDetails">
@@ -60,12 +61,10 @@ class CoffeeStore extends Component {
         <Sidebar />
         <Nav />
         <div className="storeBody" />
-          <div className="titleBackground">
-            <h1>Browse our selection:</h1>
-          </div>
-        <div className="subImage">
-        {displayProducts}
+        <div className="titleBackground">
+          <h1>Browse our selection:</h1>
         </div>
+        <div className="subImage">{displayProducts}</div>
         <div className="checkoutButtonDiv">
           <Link to="/cart"><button className="checkoutButton">Continue to Cart</button></Link>
         </div>

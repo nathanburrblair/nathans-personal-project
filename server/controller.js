@@ -56,8 +56,9 @@ module.exports = {
     }, 
 
     showMyCoffees: (req, res) => {
+        let {user_id} = req.session.user;
         const db = req.app.get('db');
-        db.my_coffees()
+        db.my_coffees({user_id})
         .then( coffees => {
             res.status(200).send(coffees);
         })

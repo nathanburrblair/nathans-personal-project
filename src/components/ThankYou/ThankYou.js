@@ -4,6 +4,11 @@ import './ThankYou.css';
 import Sidebar from "../Sidebar/Sidebar";
 
 class ThankYou extends Component {
+
+    componentDidMount () {
+        window.scrollTo(0, 0)
+    }
+
     render () {
         return(
             <div>

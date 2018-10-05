@@ -11,6 +11,7 @@ class Nav extends Component {
     axios.get("/api/cart").then(res => {
       this.props.displayCart(res.data);
     });
+    window.scrollTo(0, 0)
   }
 
   render() {
