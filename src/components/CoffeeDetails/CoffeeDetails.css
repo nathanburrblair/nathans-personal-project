@@ -9,7 +9,7 @@
 .detailsBody {
     display: flex;
     flex-direction: column;
-    background-image: url('./coffee-beans-1.jpg');
+    background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffee-beans-1.jpg');
     width: 100%;
     height: 250px;
     background-position: center;

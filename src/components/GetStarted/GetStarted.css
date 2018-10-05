@@ -10,7 +10,7 @@
 .body {
     display: flex;
     flex-direction: row;
-    background-image: url('./Images/coffeeonwoodtable.jpg');
+    background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffeeonwoodtable.jpg');
     width: 100%;
     height: 200px;
     background-position: center;
