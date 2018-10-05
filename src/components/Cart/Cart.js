@@ -30,7 +30,7 @@ class Cart extends Component {
     let displayCartItems = this.props.cart.map((element, i) => {
       return (
         <div className="cartProducts">
-          <div>
+          <div className="cartImageContainer">
             <img className="productImage" src={element.product_image} alt="" />
           </div>
           <div className="cartDetails">

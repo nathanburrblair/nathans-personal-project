@@ -8,6 +8,19 @@
     background-color: #FCFAF8;
 }
 
+.checkoutBody {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/nathan-dumlao-544925-unsplash+(2).jpg');
+    width: 100%;
+    height: 250px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .checkoutProductImage {
     width: 75px;
 }
@@ -51,4 +64,65 @@
     margin-top: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+}
+
+@media (min-width: 600px) {
+    .checkoutProducts {
+        margin: 8px 50px 0 50px;
+    }
+    .checkoutImageContainer {
+        width: 200px;
+    }
+    .checkoutDetails {
+        width: 200px;
+    }
+    .checkoutBody {
+        height: 275px;
+        background-position: center;
+    }
+}
+
+@media (min-width: 750px) {
+    .checkoutProducts {
+        margin: 8px 80px 0 80px;
+    }
+    .checkoutImageContainer {
+        width: 250px;
+    }
+    .checkoutDetails {
+        width: 250px;
+    }
+    .checkoutBody {
+        height: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    .checkoutProducts {
+        margin: 8px 140px 0 140px;
+    }
+    .checkoutImageContainer {
+        width: 340px;
+    }
+    .checkoutDetails {
+        width: 340px;
+    }
+    .checkoutBody {
+        height: 325px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .checkoutProducts {
+        margin: 8px 200px 0 200px;
+    }
+    .checkoutImageContainer {
+        width: 380px;
+    }
+    .checkoutDetails {
+        width: 380px;
+    }
+    .checkoutBody {
+        height: 350px;
+    }
 }

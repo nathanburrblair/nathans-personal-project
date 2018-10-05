@@ -2,7 +2,7 @@ const initialState = {
     user: {},
     coffeeDetails: [],
     products: [{test : 'data'}],
-    cart: [{test: 'data'}]
+    cart: []
     // latestCoffee: [{test: 'data'}]
 }
 

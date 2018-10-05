@@ -40,7 +40,7 @@ class Checkout extends Component {
         axios.delete('/api/cart')
         .then(res => {
           this.props.displayCart(res.data);
-        }) //I need a delete endpoint and this so i can clear items from the cart now that the purchase is complete
+        }) 
         this.props.history.push("/thank-you")
       });
   };
@@ -54,10 +54,10 @@ class Checkout extends Component {
     let displayCartItems = this.props.cart.map((element, i) => {
     return (
         <div className="checkoutProducts">
-          <div>
+          <div className="checkoutImageContainer">
             <img className="checkoutProductImage" src={element.product_image} alt="" />
           </div>
-          <div className="cartDetails">
+          <div className="checkoutDetails">
             <li className="checkoutProductName" productname={i}>{element.product_name}</li>
             <div className="checkoutLineSeparator" />
             <li className="checkoutProductRoaster" productroaster={i}>{element.product_roaster}</li>
@@ -72,8 +72,9 @@ class Checkout extends Component {
         <div className="mainCart">
         <Sidebar />
         <Nav />
-        <div className="cartBody" />
+        <div className="checkoutBody" />
         <div className="titleBackground">
+          <h1>Review Your Cart</h1>
         </div>
         <div className="subImage">{displayCartItems}</div>
         <div className="checkoutButtonDiv">

@@ -54,7 +54,6 @@ h3 {
     padding: 0px 0px 16px 0px;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-    text-transform: lowercase;
 }
 .singleAllCoffees li {
     text-align: left;
@@ -63,10 +62,11 @@ h3 {
 }
 
 .coffeename {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 400;
-    margin: 16px 10px;
+    margin: 36px 10px 4px 10px;
     text-align: center !important;
+    text-transform: capitalize;
 }
 
 .lineSeparator {
@@ -75,16 +75,29 @@ h3 {
 }
 
 .coffeeRoaster {
-
+    margin: 0 0 12px 0;
+    text-transform: capitalize;
 }
 
 .coffeeOrigin {
     
 }
 
+.startAdditionalThoughts {
+    padding-top: 20px;
+}
+
 .belowImage {
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
     padding: 28px 0 0 0;
+}
+
+.welcomeText {
+    width: 80%;
+    padding-top: 20px;
 }
 
 .addCoffeeButton {
@@ -107,11 +120,15 @@ h3 {
     justify-content: space-around;
 }
 
+.userInfo {
+    font-size: 12px;
+}
+
 .parentUser {
     height: 40px;
     width: 100%;
     background-color: #FCFAF8;
-    margin: 0 0 20px 0;
+    margin: 30px 0 10px 0;
 }
 
 .parentUser p {

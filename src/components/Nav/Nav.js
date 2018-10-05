@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import { connect } from "react-redux";
+import axios from 'axios';
+import { displayCart } from "../../ducks/reducer";
 
 class Nav extends Component {
+
+  componentDidMount() {
+    axios.get("/api/cart").then(res => {
+      this.props.displayCart(res.data);
+    });
+  }
+
   render() {
     console.log('items in cart', this.props.cart.length)
     return (
@@ -40,4 +49,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(Nav);
+export default connect(mapStateToProps, {displayCart})(Nav);

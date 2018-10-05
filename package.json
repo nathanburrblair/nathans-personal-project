@@ -34,10 +34,10 @@
   "main": "server/server.js",
   "proxy": {
     "/api": {
-      "target": "process.env.REACT_APP_LOGIN"
+      "target": "http://localhost:4400"
     },
     "/auth": {
-      "target": "process.env.REACT_APP_LOGIN"
+      "target": "http://localhost:4400"
     }
   }
 }

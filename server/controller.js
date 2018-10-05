@@ -42,10 +42,10 @@ module.exports = {
     }, 
 
     updateCoffee: (req, res) => {
-        let {additionalthoughts, coffeename} = req.body;
+        let {additionalthoughts} = req.body;
         let {coffee_id} = req.params;
         const db = req.app.get('db')
-        db.update_coffee({additionalthoughts, coffeename, coffee_id})
+        db.update_coffee({additionalthoughts, coffee_id})
         .then(coffees => {
             res.status(200).send(coffees)
         })

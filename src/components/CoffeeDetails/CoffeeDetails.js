@@ -23,8 +23,8 @@ class CoffeeDetails extends Component {
       editThoughtsToggle: false,
       editThoughtsInput: "",
       coffee_id: 0,
-      editNameToggle: false,
-      editNameInput: ""
+      // editNameToggle: false,
+      // editNameInput: ""
     };
 
     this.handleEditClick = this.handleEditClick.bind(this);
@@ -32,10 +32,10 @@ class CoffeeDetails extends Component {
     this.handleEditInput = this.handleEditInput.bind(this);
     this.updateThoughts = this.updateThoughts.bind(this);
 
-    this.handleEditName = this.handleEditName.bind(this);
-    this.handleNameClick = this.handleNameClick.bind(this);
-    this.handleNameSave = this.handleNameSave.bind(this);
-    this.updateName = this.updateName.bind(this); 
+    // this.handleEditName = this.handleEditName.bind(this);
+    // this.handleNameClick = this.handleNameClick.bind(this);
+    // this.handleNameSave = this.handleNameSave.bind(this);
+    // this.updateName = this.updateName.bind(this); 
   }
 
   componentDidMount() {
@@ -52,7 +52,7 @@ class CoffeeDetails extends Component {
         additionalthoughts: res.data[0].additionalthoughts,
         editThoughtsInput: res.data[0].additionalthoughts,
         coffee_id: res.data[0].coffee_id,
-        editNameInput: res.data[0].coffeename
+        // editNameInput: res.data[0].coffeename
       });
     });
   }
@@ -84,29 +84,29 @@ class CoffeeDetails extends Component {
 
   //This allows me to edit the coffee name
 
-  handleEditName(e) {
-      this.setState({
-        editNameInput: e.target.value
-      })
-  }
+  // handleEditName(e) {
+  //     this.setState({
+  //       editNameInput: e.target.value
+  //     })
+  // }
 
-  handleNameClick () {
-      this.state.editThoughtsToggle
-      ? this.handleNameSave()
-      : this.setState({ editNameToggle: true })
+  // handleNameClick () {
+  //     this.state.editThoughtsToggle
+  //     ? this.handleNameSave()
+  //     : this.setState({ editNameToggle: true })
 
-  }
+  // }
 
-  handleNameSave() {
-      this.updateName(this.state.editNameInput, this.state.coffee_id);
-        this.setState({editNameToggle: false})
-  }
+  // handleNameSave() {
+  //     this.updateName(this.state.editNameInput, this.state.coffee_id);
+  //       this.setState({editNameToggle: false})
+  // }
 
-  updateName(str, coffee_id) {
-    axios.put(`/api/coffees/${coffee_id}`, {coffeename: str})
-    .then(res =>
-        this.setState({coffeename: res.data[0].coffeename}))
-  }
+  // updateName(str, coffee_id) {
+  //   axios.put(`/api/coffees/${coffee_id}`, {coffeename: str})
+  //   .then(res =>
+  //       this.setState({coffeename: res.data[0].coffeename}))
+  // }
 
   render() {
     // let {
@@ -129,7 +129,7 @@ class CoffeeDetails extends Component {
         <div className="detailsBody" />
 
         <h1 className="coffeedetails">{this.state.coffeename}</h1>
-        <div className="additionalThoughts">
+        {/* <div className="additionalThoughts">
           <h3>Coffee Name:</h3> 
           <h4>{this.state.coffeename}</h4>
           {this.state.editNameToggle ? (
@@ -144,7 +144,7 @@ class CoffeeDetails extends Component {
           <button className="editButton" onClick={this.handleNameClick}>
             {this.state.editNameToggle ? "Save" : "Edit"}
           </button>
-        </div>
+        </div> */}
 
         <div>
           <h3 className="detailItem">Roaster: {this.state.coffeeroaster}</h3>
@@ -175,7 +175,7 @@ class CoffeeDetails extends Component {
         </div>
 
         <div className="additionalThoughts">
-          <h3>Additional Thoughts:</h3> <h4>{this.state.additionalthoughts}</h4>
+          <h3>Additional Thoughts:</h3> 
           {this.state.editThoughtsToggle ? (
             <input
               placeholder="Your Thoughts Here"
@@ -183,7 +183,7 @@ class CoffeeDetails extends Component {
               value={this.state.editThoughtsInput}
             />
           ) : (
-            <div>{this.state.latestCoffee}</div>
+            <h4>{this.state.additionalthoughts}</h4>
           )}
           <button className="editButton" onClick={this.handleEditClick}>
             {this.state.editThoughtsToggle ? "Save" : "Edit"}
