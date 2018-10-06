@@ -10,7 +10,7 @@
 .addBody {
     display: flex;
     flex-direction: row;
-    background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffeewithplant.jpeg');
+    background-image: url('http://d2f28i5t3v7v86.cloudfront.net/coffeewithplant.jpeg');
     width: 100%;
     height: 250px;
     background-position: center;

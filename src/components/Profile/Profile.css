@@ -10,7 +10,7 @@
 .myCoffeesBody {
     display: flex;
     flex-direction: row;
-    background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffeecircle.jpg');
+    background-image: url('http://d2f28i5t3v7v86.cloudfront.net/coffeecircle.jpg');
     width: 100%;
     height: 270px;
     background-position: center;
