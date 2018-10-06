@@ -50,7 +50,7 @@ app.get('/auth/callback', async (req, res) => {
         client_secret: CLIENT_SECRET,
         code: req.query.code,
         grant_type: 'authorization_code',
-        redirect_uri: `http://${req.headers.host}/auth/callback` //needs to be changed to https for the production site to work, and back to http if I'm working on dev
+        redirect_uri: `https://${req.headers.host}/auth/callback` //needs to be changed to https for the production site to work, and back to http if I'm working on dev
     }
 
     //post request with code for token
