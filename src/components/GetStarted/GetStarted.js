@@ -68,6 +68,9 @@ class GetStarted extends Component {
           </div>
         </div>
         {displayAllCoffees}
+        <footer className="footer">
+          <p>Roasted 2018</p>
+        </footer>
       </div>
     );
   }

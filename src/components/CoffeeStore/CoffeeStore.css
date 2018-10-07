@@ -116,6 +116,7 @@
     flex-direction: column;
     justify-content: center;
     height: 75px;
+    margin: auto 0 0 0;
     background-color: #DED9D3;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;

@@ -135,6 +135,9 @@ class AddCoffee extends Component {
                         <button className="addSingleCoffee" onClick={this.handleAddCoffee}>Add</button>
                     </div>
                 </div>
+                <footer className="footer">
+                    <p>Roasted 2018</p>
+                </footer>
             </div>
         )
     }

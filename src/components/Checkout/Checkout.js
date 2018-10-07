@@ -62,7 +62,7 @@ class Checkout extends Component {
             <li className="checkoutProductName" productname={i}>{element.product_name}</li>
             <div className="checkoutLineSeparator" />
             <li className="checkoutProductRoaster" productroaster={i}>{element.product_roaster}</li>
-            <li className="cartProductPrice" productprice={i}>${element.price}</li>
+            <li className="checkoutProductPrice" productprice={i}>${element.price}</li>
           </div>
         </div>
       );
@@ -80,7 +80,7 @@ class Checkout extends Component {
         <div className="subImage">{displayCartItems}</div>
         <div className="checkoutButtonDiv">
         <div className="checkoutPrice">Total: ${this.state.totalPrice}</div>
-          <Link to="/checkout"><button className="checkoutButton">Purchase</button></Link>
+          {/* <Link to="/checkout"><button className="checkoutButton">Purchase</button></Link> */}
             <StripeCheckout
                 name="Roasted"
                 description="An App For Coffee Lovers"

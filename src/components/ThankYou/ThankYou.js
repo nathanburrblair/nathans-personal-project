@@ -24,7 +24,6 @@ class ThankYou extends Component {
                         <div className="thankyouContainer">
                             <h1 className="thankyouText">Thank you</h1>
                             <p>Your order won't be on it's way soon because this isn't a real store.</p>
-                            {/* <img src="https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffee+circle.jpg" alt=""/> */}
                         </div>
                     </div>
                 </body>

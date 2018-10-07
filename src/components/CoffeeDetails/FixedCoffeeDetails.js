@@ -4,7 +4,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import "./FixedDetails.css";
 import Sidebar from "../Sidebar/Sidebar";
-import {Link} from 'react-router-dom';
+
 import autosize from "autosize";
 // import {showLastCoffee} from '../../ducks/reducer';
 
@@ -150,11 +150,10 @@ class CoffeeDetails extends Component {
                             </button>
                             </div>
                         </div>
-                      <Link to="/profile"><button className="profileButton">Your Profile</button></Link>
                     </div>
                 </body>
-                <footer className="footer">
-                    <p>Roasted 2018</p>
+                <footer className="theDetailsFooter">
+
                 </footer>
             </div>
         ) 

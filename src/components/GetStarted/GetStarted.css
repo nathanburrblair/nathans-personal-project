@@ -142,6 +142,18 @@ h3 {
     border-radius: 50%;
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75px;
+    margin: auto 0 0 0;
+    background-color: #DED9D3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #3D3B37;
+}
+
 @media (min-width: 600px) {
     .singleAllCoffees {
         margin: 8px 20px 0 20px;

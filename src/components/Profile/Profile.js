@@ -37,15 +37,15 @@ this.handleDeleteCoffee = this.handleDeleteCoffee.bind(this);
         <div className="myCoffees">
           <ul className="singleMyCoffee">
             <div className="myCoffeeName" coffeename={i}>{" "}{element.coffeename}</div>
+            <div className="elCoffeeRoaster" coffeeroaster={i}>{element.coffeeroaster}</div>
             <div className="lineSeparator" />
             <li email={i}>Email: {element.email}</li>
-            <li coffeeroaster={i}>Roaster: {element.coffeeroaster}</li>
             <li coffeeorigin={i}>Origin: {element.coffeeorigin}</li>
             <li coffeebrewmethod={i}>Brew Method: {element.coffeebrewmethod}</li>
             <li coffeeweight={i}>Coffee Weight (grams): {element.coffeeweight}</li>
             <li waterweight={i}>Water Weight (grams): {element.waterweight}</li>
             <li rating={i}>Rating: {element.rating}</li>
-            <li additionalthoughts={i}>Additional Thoughts: {element.additionalthoughts}</li>
+            <li className="losAdditionalThoughts" additionalthoughts={i}>Additional Thoughts: {element.additionalthoughts}</li>
             <div>
               <button className="deleteACoffee" onClick={() => this.handleDeleteCoffee(element.coffee_id)}>Delete</button>
             </div>
