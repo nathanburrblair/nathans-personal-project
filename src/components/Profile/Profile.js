@@ -39,7 +39,6 @@ this.handleDeleteCoffee = this.handleDeleteCoffee.bind(this);
             <div className="myCoffeeName" coffeename={i}>{" "}{element.coffeename}</div>
             <div className="elCoffeeRoaster" coffeeroaster={i}>{element.coffeeroaster}</div>
             <div className="lineSeparator" />
-            <li email={i}>Email: {element.email}</li>
             <li coffeeorigin={i}>Origin: {element.coffeeorigin}</li>
             <li coffeebrewmethod={i}>Brew Method: {element.coffeebrewmethod}</li>
             <li coffeeweight={i}>Coffee Weight (grams): {element.coffeeweight}</li>

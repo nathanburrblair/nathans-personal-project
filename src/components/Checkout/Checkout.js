@@ -5,7 +5,6 @@ import { displayCart } from "../../ducks/reducer";
 import { connect } from "react-redux";
 import Sidebar from '../Sidebar/Sidebar';
 import Nav from '../Nav/Nav';
-import {Link} from 'react-router-dom';
 import './Checkout.css'
 
 class Checkout extends Component {
@@ -84,7 +83,7 @@ class Checkout extends Component {
             <StripeCheckout
                 name="Roasted"
                 description="An App For Coffee Lovers"
-                image="http://via.placeholder.com/100x100"
+                image="http://d2f28i5t3v7v86.cloudfront.net/coffee+circle.jpg"
                 token={this.onToken}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
                 amount={this.state.totalPrice*100}
