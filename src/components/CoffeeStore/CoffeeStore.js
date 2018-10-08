@@ -62,6 +62,7 @@ class CoffeeStore extends Component {
         <Nav />
         <div className="storeBody" />
         <div className="titleBackground">
+          <h1>Welcome To The Roasted Store</h1>
           <h1>Browse our selection:</h1>
         </div>
         <div className="subImage">{displayProducts}</div>
