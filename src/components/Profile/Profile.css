@@ -95,6 +95,15 @@ h1 {
     cursor: pointer;
 }
 
+.deleteACoffee:active {
+    background-color: #565E50;
+    transform: translateY(2px);
+}
+
+.deleteACoffee:focus {
+    outline:0;
+}
+
 .body {
     padding-top: 50px;
 }

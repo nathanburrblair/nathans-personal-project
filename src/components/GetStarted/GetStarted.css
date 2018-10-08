@@ -113,6 +113,15 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.addCoffeeButton:active {
+    background-color: #565E50;
+    transform: translateY(2px);
+}
+
+.addCoffeeButton:focus {
+    outline:0;
+}
+
 .allUserInfo {
     display: flex;
     flex-direction: column;

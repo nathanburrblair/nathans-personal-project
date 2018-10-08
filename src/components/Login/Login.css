@@ -36,6 +36,15 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.mainLoginButton:active {
+  background-color: #2E2D2A;
+  transform: translateY(2px);
+}
+
+.mainLoginButton:focus {
+  outline:0;
+}
+
 @media (max-width: 330px) {
   .mainTitle {
     padding: 20px 0 0 0;

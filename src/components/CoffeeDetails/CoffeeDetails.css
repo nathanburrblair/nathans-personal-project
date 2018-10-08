@@ -92,3 +92,16 @@ h4 {
      margin: 20px 20px 20px 20px;
  }
 
+ .profileButtonPush {
+    width: 280px;
+    height: 54px;
+    border: none;
+    background-color: #738169;
+    color: #F1EEEA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 40px 0 40px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+ }
+

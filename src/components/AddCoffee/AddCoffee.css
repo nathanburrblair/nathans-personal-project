@@ -33,6 +33,15 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.addSingleCoffee:active {
+    background-color: #565E50;
+    transform: translateY(2px);
+}
+
+.addSingleCoffee:focus {
+    outline:0;
+}
+
 input {
     width: 240px;
     height: 18px;
@@ -41,6 +50,15 @@ input {
     font-family: 'Montserrat', sans-serif;
     border: none;
     background-color: #DED9D3;
+}
+
+input:active {
+    background-color: #B9B3AB;
+}
+
+input:focus {
+    outline:0;
+    background-color: #B9B3AB;
 }
 
 .add {

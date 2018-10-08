@@ -34,3 +34,25 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.thankYouButton {
+    width: 280px;
+    height: 54px;
+    border: none;
+    background-color: #738169;
+    color: #F1EEEA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 26px 0 40px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.thankYouButton:active {
+    background-color: #565E50;
+    transform: translateY(2px);
+}
+
+.thankYouButton:focus {
+    outline:0;
+}
