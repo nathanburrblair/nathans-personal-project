@@ -12,7 +12,7 @@ class GetStarted extends Component {
     this.state = {
       allCoffees: []
     };
-  }
+    }
 
   componentDidMount() {
     axios.get("/api/coffees/all-coffees").then(res =>

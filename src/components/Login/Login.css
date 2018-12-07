@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url('http://d2f28i5t3v7v86.cloudfront.net/coffee+circle.jpg');
+  background-image: url('http://d2f28i5t3v7v86.cloudfront.net/coffeecircle.jpg');
+  /* background-image: url('http://d2f28i5t3v7v86.cloudfront.net/coffee+circle.jpg'); */
   /* background-image: url('https://s3-us-west-1.amazonaws.com/nathan-blair-devmtn-personal-project/coffee+circle.jpg'); */
   height: 100vh;
   background-position: center;
@@ -11,9 +12,16 @@
   background-attachment: fixed;
 }
 
+.titleBlock {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mainTitle {
   margin: 0;
-  padding: 60px 0 10px 0;
+  padding: 32px 0 10px 0;
   font-size: 62px;
   color: #f1eeea;
 }
@@ -32,7 +40,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  margin: 0 0 90px 0;
+  margin: 0 0 40px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -47,26 +55,43 @@
 
 @media (max-width: 330px) {
   .mainTitle {
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 0;
   }
   
   .mainLoginButton {
-    margin: 0 0 50px 0;
+    margin: 0 0 43px 0;
   }
 }
 
 @media (min-width: 700px) {
   .mainBody {
     background-position: top;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .mainLoginButton {
-    margin: 25px 0 0 0;
+    margin: 25px 0 40px 0;
   }
 }
 @media (min-width: 900px) {
   .mainBody {
     background-position: 50% 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainBody {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 200px;
+    background-color: rgb(23.9, 23.1, 21.6, 0.5);
   }
 }
