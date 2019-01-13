@@ -6,6 +6,7 @@ import "./FixedDetails.css";
 import Sidebar from "../Sidebar/Sidebar";
 import {Link} from 'react-router-dom';
 import autosize from "autosize";
+import { element } from "prop-types";
 // import {showLastCoffee} from '../../ducks/reducer';
 
 class CoffeeDetails extends Component {
@@ -24,7 +25,8 @@ class CoffeeDetails extends Component {
       additionalthoughts: "",
       editThoughtsToggle: false,
       editThoughtsInput: "",
-      coffee_id: 0
+      coffee_id: 0,
+      coffeeimage: ''
       // editNameToggle: false,
       // editNameInput: ""
     };
@@ -53,7 +55,8 @@ class CoffeeDetails extends Component {
         rating: res.data[0].rating,
         additionalthoughts: res.data[0].additionalthoughts,
         editThoughtsInput: res.data[0].additionalthoughts,
-        coffee_id: res.data[0].coffee_id
+        coffee_id: res.data[0].coffee_id,
+        coffeeimage:res.data[0].coffeeimage
         // editNameInput: res.data[0].coffeename
       });
     });
@@ -124,6 +127,7 @@ class CoffeeDetails extends Component {
 
                             <div className="roastDetail">{this.state.coffeeroaster}</div>
                             <div className="lineSeparator" />
+                            <img className="coffee_image" src={this.state.coffeeimage} alt='' />
                             <div className="detailItem">Origin: {this.state.coffeeorigin}</div>
                             <div className="detailItem">Method: {this.state.coffeebrewmethod}</div>
                             <div className="detailItem">Coffee Weight (g): {this.state.coffeeweight}</div>

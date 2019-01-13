@@ -38,7 +38,9 @@ this.handleDeleteCoffee = this.handleDeleteCoffee.bind(this);
           <ul className="singleMyCoffee">
             <div className="myCoffeeName" coffeename={i}>{" "}{element.coffeename}</div>
             <div className="elCoffeeRoaster" coffeeroaster={i}>{element.coffeeroaster}</div>
+            
             <div className="lineSeparator" />
+            <img className="coffee_image" src={element.coffeeimage} alt='' />
             <li coffeeorigin={i}>Origin: {element.coffeeorigin}</li>
             <li coffeebrewmethod={i}>Brew Method: {element.coffeebrewmethod}</li>
             <li coffeeweight={i}>Coffee Weight (grams): {element.coffeeweight}</li>
