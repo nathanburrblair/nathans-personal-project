@@ -36,7 +36,10 @@ class GetStarted extends Component {
               </div>
               <div className="coffeename" coffeename={i}>{" "}{element.coffeename}</div>
                 <div className="coffeeRoaster" coffeeroaster={i}>{element.coffeeroaster}</div>
+
               <div className="lineSeparator" />
+
+              <img className="coffee_image" src={element.coffeeimage} alt='' />
               <div className="otherUserInfo">
                 <li className="coffeeOrigin" coffeeorigin={i}>Origin: {element.coffeeorigin}</li>
                 <li coffeebrewmethod={i}>Brew Method: {element.coffeebrewmethod}</li>

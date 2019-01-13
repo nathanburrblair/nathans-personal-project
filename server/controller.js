@@ -23,7 +23,8 @@ module.exports = {
       coffeeweight,
       waterweight,
       rating,
-      additionalthoughts
+      additionalthoughts,
+      coffeeimage
     } = req.body.coffee;
     let { user_id } = req.session.user;
     console.log(req.session);
@@ -37,6 +38,7 @@ module.exports = {
       waterweight,
       rating,
       additionalthoughts,
+      coffeeimage,
       user_id
     })
       .then(coffees => {
