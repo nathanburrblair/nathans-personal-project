@@ -67,8 +67,6 @@
   justify-content: center;
   width: 320px;
   height: 200px;
-  background-color: rgb(23.9, 23.1, 21.6, 0.5);
-  box-shadow: 0 0 10px 1px rgb(23.9, 23.1, 21.6, 0.5);
 }
 
 .space {
@@ -113,8 +111,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 200px;
-    background-color: rgb(23.9, 23.1, 21.6, 0.5);
+    width: 400px;
+    height: 440px;
+    background-color: rgb(23.9, 23.1, 21.6, 0.7);
   }
 }
