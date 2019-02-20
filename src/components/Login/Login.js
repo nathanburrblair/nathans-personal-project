@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
   login() {
@@ -19,12 +20,18 @@ export default class Login extends Component {
         <div className="titleBlock">
           <div>
             <h1 className="mainTitle">ROASTED</h1>
-            {/* <h3 className="mainSubtitle">an app for coffee lovers</h3> */}
           </div>
-          <div>
+          <div className="twoButtons">
             <button className="mainLoginButton" onClick={this.login}>
               Login
             </button>
+            <div className="space"></div>
+            <Link to="/get-started"><button className="guestLogin">
+              don't make me log in
+            </button></Link>
+          </div>
+          <div className="mainSubtitle">
+            <h3>an app for coffee lovers</h3>
           </div>
         </div>
       </div>

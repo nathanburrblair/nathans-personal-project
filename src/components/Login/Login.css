@@ -16,19 +16,25 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
 .mainTitle {
   margin: 0;
-  padding: 32px 0 10px 0;
+  padding: 18px 0 10px 0;
   font-size: 62px;
   color: #f1eeea;
 }
 
 .mainSubtitle {
-  margin: 0 !important;
-  color: #f1eeea !important;
+  margin: 0 0 0 0;
+}
+
+.mainSubtitle h3 {
+  color: #F1EEEA;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
 
 .mainLoginButton {
@@ -40,8 +46,33 @@
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  margin: 0 0 40px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.guestLogin {
+  width: 270px;
+  height: 64px;
+  border: none;
+  background-color: #A8A398;
+  color: #3D3B37;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.twoButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 200px;
+  background-color: rgb(23.9, 23.1, 21.6, 0.5);
+  box-shadow: 0 0 10px 1px rgb(23.9, 23.1, 21.6, 0.5);
+}
+
+.space {
+  height: 20px;
 }
 
 .mainLoginButton:active {
@@ -57,20 +88,12 @@
   .mainTitle {
     padding: 30px 0 0 0;
   }
-  
-  .mainLoginButton {
-    margin: 0 0 43px 0;
-  }
 }
 
 @media (min-width: 700px) {
   .mainBody {
     background-position: top;
     justify-content: space-between;
-  }
-
-  .mainLoginButton {
-    margin: 25px 0 40px 0;
   }
 }
 @media (min-width: 900px) {
